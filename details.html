@@ -1,0 +1,382 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turtle hatcheries in Sri Lanka</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="ticketstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</head>
+
+<body onload="loadData()">
+
+    <section class="header">
+        <div class="top_header">
+            <div class="logo"><img src="pics/logo2.png">
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a href="turtle hatcheries.html"><b>Home</b> </a>
+                <a href="Ticketspage.html"><b>Tickets </b> </a>
+
+                <a href="details.html" class="active"><b>Details</b></a>
+                <a href="payment.html"><b>Payment </b></a>
+                <a href="confirmation.html"><b>Confirmation </b></a>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <div class="content">
+                <h1><br>BUY TICKETS</h1>
+                <p>
+                    Turtle hatcheries in Sri Lanka play a vital role in protecting endangered sea turtles. <br>
+                </p>
+            </div>
+            <div>
+                <video autoplay loop muted plays-inline class="back-video">
+                    <source src="pics/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <div class="all">
+        <div class="row">
+            <div class="turtle-col">
+                <div class="threats">
+                    <h1>Enter your details</h1>
+                    <section class="pt-5 pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 mt-5 mb-5">
+                                    <div class="form-area">
+                                        <div class="form-inner">
+                                            <form id="customer_details"></form>
+                                            <div class="form-group">
+                                                <label for="full_name">Full Name</label>
+                                                <p style="font-size:xx-small;">Same as on your ID</p>
+                                                <input type="text"
+                                                       oninvalid="this.setCustomValidity('Please Add the Full Name')"
+                                                       oninput="this.setCustomValidity('')" form="customer_details"
+                                                       class="form-control" value="" id="full_name" required/>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <form id="login" onsubmit="process(event)">
+                                                    <p>Enter your phone number:</p>
+                                                    <p style="font-size:xx-small;">We may reach out for booking here over
+                                                        SMS/WhatsApp</p>
+
+                                                    <input id="phone" type="tel" name="phone"
+                                                           oninvalid="this.setCustomValidity('Please Add the Your Phone Number')"
+                                                           oninput="this.setCustomValidity('')" form="login"
+                                                           class="form-control" value="" id="phone" required/>
+
+                                                </form>
+                                                <div class="alert alert-info" style="display: none;"></div>
+                                                <div class="alert alert-error" style="display: none"></div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <p style="font-size:xx-small;">We'll send your tickets here</p>
+                                                <input type="email" form="customer_details" class="form-control"
+                                                       name="email" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="confirm_email">Confirm Email</label>
+                                                <p style="font-size:xx-small;">Just to ensure we're got this right</p>
+                                                <input type="email" form="customer_details" class="form-control"
+                                                       name="confirm_email" id="confirm_email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender">Gender</label>
+                                                <select id="gender" name="gender" form="customer_details" size="1"
+                                                        class="form-control">
+                                                    <option disabled selected value>Select Gender..</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="submit_form">
+<!--                                <a href="confirmation.html">-->
+                                    <button id="submit_details" onclick="saveDetails()"
+                                             value="Continue with Purchase"
+                                            style="font-size: larger; cursor: pointer; border-radius: 10px;
+                                        padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; width: 50%; height: 5%;">
+                                        Pay
+                                    </button>
+                                </a>
+
+                            </div>
+
+                            <!--<div class="row justify-content-center">
+                                <div class="col-md-6 mt-5 mb-5">
+                                    <div class="submit_form">
+                                        <input type="submit" id="submit_details" form="customer_details" value="Continue with Purchase" style="font-size: larger; cursor: pointer;
+                                        border-radius: 50px; padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px;">
+                                    </div>
+                                </div>
+
+                            </div>-->
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="turtle-col">
+                <div class="cat">
+                    <h1>Your Booking Details</h1>
+                    <div class="table">
+                        <center>
+                            <table border="1">
+                                <tbody>
+                                <tr style="color: white;">
+                                    <th>Date</th>
+                                    <td>
+                                        <span id='cur_date' style="color: aliceblue;"></span>
+                                    </td>
+                                </tr>
+
+                                <tr style="color: white;">
+                                    <th>Time</th>
+                                    <td><span id="ar_time">07.00 am - 08.00 am</span></td>
+                                </tr>
+                                <tr style="color: white;">
+                                    <th>Duration</th>
+                                    <td><span id="duration">1 hrs ( 01 Normal : 00 Peak)</span> hrs</td>
+                                </tr>
+
+                                <tr style="color: white;">
+                                    <th>Tickets</th>
+                                    <th>Chargers</th>
+                                </tr>
+                                <tr style="color: white;">
+                                    <td><span id="guest_type"><Span id="sl_adults">1</Span><span
+                                            id="ticketType"> SL Adult</span></td>
+                                    <td><span id="sla">$</span></td>
+                                </tr>
+                                <tr style="color: white;">
+                                    <td><span id="guest_type"><Span id="sl_child">1</Span><span
+                                            id="ticketType"> SL Child</span></td>
+                                    <td><span id="slc">$</span></td>
+                                </tr>
+                                <tr style="color: white;">
+                                    <td><span id="guest_type"><Span id="fr_adults">1</Span><span id="ticketType"> Foreigner Adult</span>
+                                    </td>
+                                    <td><span id="fa">$</span></td>
+                                </tr>
+                                <tr style="color: white;">
+                                    <td><span id="guest_type"><Span id="fr_child">1</Span><span id="ticketType"> Foreigner Child</span>
+                                    </td>
+                                    <td><span id="fc">$</span></td>
+                                </tr>
+                                <tr style="color: white;">
+                                    <td><span id="guest_type"><Span id="infant">1</Span><span id="ticketType"> Infant</span>
+                                    </td>
+                                    <td><span id="i">$</span></td>
+                                </tr>
+
+                                <tr style="color: white;">
+                                    <th>Total</th>
+                                    <td><span id="total">$10.00</span></td>
+                                </tr>
+                            </table>
+                        </center>
+<!--                        <script>-->
+<!--                            document.getElementById("cur_date").innerHTML = localStorage.getItem("arrivingDate");-->
+<!--                            document.getElementById("ar_time").innerHTML = localStorage.getItem("timeSlotArray");-->
+<!--                            document.getElementById("duration").innerHTML = localStorage.getItem("stayDuration");-->
+
+<!--                            document.getElementById("sl_adults").innerHTML = localStorage.getItem("SL Adults");-->
+<!--                            document.getElementById("sl_child").innerHTML = localStorage.getItem("SL Child");-->
+<!--                            document.getElementById("fr_adults").innerHTML = localStorage.getItem("Foreigner Adult");-->
+<!--                            document.getElementById("fr_child").innerHTML = localStorage.getItem("Foreigner Child");-->
+<!--                            document.getElementById("infant").innerHTML = localStorage.getItem("Infant");-->
+
+<!--                        </script>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="pics/logo2.png" class="logo_footer">
+                    <p>
+                        Join with Turtles Lanka and make a difference in saving turtles.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us
+                        <div class="underline"><span></span></div>
+                    </h3>
+                    <ul>
+                        <li>Turtles Lanka - <i>011 2719729</i></li>
+                        <li> Hikkaduwa - <i>011 2345678</i></li>
+                        <li>Kosgoda - <i>011 2712769</i></li>
+                        <li>Bentota - <i>011 2715298</i></li>
+
+
+                        <p class="email"><i class="fa fa-envelope"></i>turtlelanka@gmail.com</p>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Links
+                        <div class="underline"><span></span></div>
+                    </h3>
+                    <ul>
+                        <li><a href="turtle hatcheries.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="map.html">Map & Highlights</a></li>
+                        <li><a href="donate.html">Purchases and Donations</a></li>
+                        <li><a href="Hikkaduwa.html">Hikkaduwa Hatchery</a></li>
+                        <li><a href="Kosgoda.html">Kosgoda Hatchery</a></li>
+                        <li><a href="bentota.html">Benthota Hatchery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Social Media
+                        <div class="underline"><span></span></div>
+                    </h3>
+
+                    <i class="fa fa-Facebook-f"></i>- Facebook<br>
+                    <i class="fa fa-twitter"></i>-Twitter<br>
+                    <i class="fa fa-whatsapp"></i>-Whatsapp<br>
+                    <i class="fa fa-instagram"></i>-Instagram
+
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyryt">- Turtleslanka © 2023 -</p>
+            <!--
+            <li>Campbell, L.M., 2010. Studying Sea Turtle Conservations and Learning about the World. Conservation and Society, 8(1), pp.1-4.</li>
+            <li>Carr, A., 1980. Some problems of sea turtle ecology. American Zoologist, 20(3), pp.489-498</li>
+           <li>Wij, I., 2011. Sri Lanka tourism: poised for growth. Gurgaon, India: HVS..</li>
+           <li>Sivakumar, M. and Steele, P., 1997. A STRATEGY FOR NATURE TOURISM MANAGEMENT.</li>
+           <li>Wickramsinghe, S., 1982. Turtle hatcheries in Sri Lanka. Marine Turtle Newsletter, 22, pp.3-4.</li>
+           <li>Kapurusinghe, T., Ekanayake, L., Saman, M.M. and Rathnakumara, D.S., 2008. Community based marine
+              turtle conservation in Kosgoda, Sri Lanka: nesting results from 2005 to 2007. TESTUDO, 6 (5), pp.40-47.</li>
+         -->
+        </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+            // -----Country Code Selection
+            $("#mobile_code").intlTelInput({
+                initialCountry: "in",
+                separateDialCode: true,
+                // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+            });
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function storageFunction() {
+
+            //document.getElementById("booking").submit();
+            var inputDate = document.getElementById("arriving_date");
+            localStorage.setItem("arrivingDate", inputDate.value);
+
+
+            var inputSLAdults = document.getElementById("sl_adults");
+            localStorage.setItem("SL Adults", inputSLAdults.value);
+            var inputSLChild = document.getElementById("sl_child");
+            localStorage.setItem("SL Child", inputSLChild.value);
+            var inputSLChild = document.getElementById("fr_adults");
+            localStorage.setItem("Foreigner Adult", inputSLChild.value);
+            var inputSLChild = document.getElementById("fr_child");
+            localStorage.setItem("Foreigner Child", inputSLChild.value);
+            var inputSLChild = document.getElementById("infant");
+            localStorage.setItem("Infant", inputSLChild.value);
+
+            //var inputSLChild = document.getElementById("full_name");
+            //localStorage.setItem("Full Name",inputSLChild.value);
+
+            var selected = [];
+            localStorage.duration = 0;
+            localStorage.arrivingTime = null;
+            for (var option of document.getElementById("time_slots").options) {
+                if (option.selected) {
+                    selected.push(option.value);
+                    localStorage.duration = Number(localStorage.duration) + 1;
+                }
+            }
+
+            //let startSlot = selected[0];
+            //let endSlot = selected[Number(localStorage.duration)];
+            // let text1 = startSlot.substring(0, 10);
+            // let text2 = endSlot.substring(11, 18);
+            // let ar_time =text1.concat(text2);
+
+            localStorage.setItem("stayDuration", localStorage.duration);
+            localStorage.setItem("timeSlotArray", selected);
+            //localStorage.setItem("arrivingTime",ar_time);
+            location.replace("details.html");
+
+
+        }
+
+
+    </script>
+
+    <script>
+
+        document.getElementById("full_name").innerHTML = localStorage.getItem("full_name");
+        const dt = new Date();
+        document.getElementById('cur_date').innerHTML = dt;
+
+    </script>
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+        const info = document.querySelector(".alert-info");
+        const error = document.querySelector(".alert-error");
+
+        function process(event) {
+            event.preventDefault();
+
+            const phoneNumber = phoneInput.getNumber();
+
+            info.style.display = "";
+            info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+        }
+
+
+    </script>
+
+    <script src="details.js"></script>
+
+</body>
+</html>

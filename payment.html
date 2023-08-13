@@ -1,0 +1,377 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Turtle hatcheries in Sri Lanka</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="ticketstyle.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<!--font awesome CDN-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</head>
+
+<body onload="loadData()">
+    <section class="header">   
+		<div class="top_header"> 
+			<div class="logo"><img src="pics/logo2.png">
+			</div>
+			<div class="topnav" id="myTopnav">
+				<a href="turtle hatcheries.html"><b>Home</b>   </a>
+				<a href="Ticketspage.html"><b>Tickets </b> </a>
+				
+			  <a href="details.html"  ><b>Details</b></a>
+			  <a href="payment.html" class="active"><b>Payment </b></a>
+              <a href="confirmation.html"><b>Confirmation </b></a>
+
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			  <i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>			
+			<div class="content">
+				<h1><br>BUY TICKETS</h1>
+				<p>
+					Turtle hatcheries in Sri Lanka play a vital role in protecting endangered sea turtles. <br>
+				</p>
+			</div>  
+			<div>
+				<video autoplay loop muted plays-inline class="back-video">
+                <source src="pics/video2.mp4" type="video/mp4">
+				</video>
+			</div>	        
+		</div>
+    </section>
+
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+              
+			}
+            
+		</script>   
+                
+                <div class="all2">
+                    <div class="row2">
+                        <div class="turtle-col2">
+                            <h1>Enter your Payment Details</h1>
+                            <div class="threats2">
+                               
+                
+                <div class="container1">
+                    <div class="title">
+                        <h4>
+                           Select a <span style="color: #6064b6 ">payment</span> method
+                        </h4>
+                        <form action="#">
+                            <input type="radio" name="payment" id="visa">
+                            <input type="radio" name="payment" id="mastercard">
+                            <input type="radio" name="payment" id="paypal">
+                            <input type="radio" name="payment" id="AMEX">
+            
+                            <div class="category">
+                                <label for="visa" class="visamethod">
+                                    <div class="imgname">
+                                        <div class="imgContainer visa">
+                                            <img src="./pics/visa.png" alt="">
+                                        </div>
+                                        <span class="name">VISA</span>
+                                    </div>
+                                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i> </span>
+                                </label>
+                                <label for="mastercard" class="mastercardmethod">
+                                    <div class="imgname">
+                                        <div class="imgContainer MasterCard">
+                                            <img src="./pics/mastercard.png" alt="">
+                                        </div>
+                                        <span class="name">MasterCard</span>
+                                    </div>
+                                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i> </span>
+                                </label>
+                                <label for="paypal" class="paypalmethod">
+                                    <div class="imgname">
+                                        <div class="imgContainer paypal">
+                                            <img src="./pics/pay.png" alt="">
+                                        </div>
+                                        <span class="name">PayPal</span>
+                                    </div>
+                                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i> </span>
+                                </label>
+                                <label for="AMEX" class="amexmethod">
+                                    <div class="imgname">
+                                        <div class="imgContainer AMEX">
+                                            <img src="./pics/amex.png" alt="">
+                                        </div>
+                                        <span class="name">AMEX</span>
+                                    </div>
+                                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i> </span>
+                                </label>
+                               
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="con"><br><br>
+                        <h4>
+                            Enter your <span style="color: #6064b6 ">payment</span> details. 
+                         </h4><br>
+                        <div class="firstrow">
+                            <div class="owner">
+                                <h3> Name on Card</h3>
+                                <div class="inputfield">
+                                    <input type="text" form = "customer_details" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="cvv">
+                                <h3>CVV</h3>
+                                <div class="inputfield">
+                                    <input type="password" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondtrow">
+                            <div class="cardno">
+                                <h3>Card Number</h3>
+                                <div class="inputfield">
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="thirdtrow">
+                            <div class="cardno">
+                                <h3>Expiery Date</h3>
+                                <div class="Selection">
+                                    <div class="date">
+                                        <select name="months" id="months" required>
+                                            <option value="jan">Jan</option>
+                                            <option value="Feb">Feb</option>
+                                            <option value="Mar">Mar</option>
+                                            <option value="Apr">Apr</option>
+                                            <option value="May">May</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Aug">Aug</option>
+                                            <option value="Sep">Sep</option>
+                                            <option value="Oct">Oct</option>
+                                            <option value="Nov">Nov</option>
+                                            <option value="Dec">Dec</option>
+                                        </select>
+                                        <select name="year" id="year" required>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                        </select>
+                                       
+                    <br><br>
+                                    </div>
+                                  
+                        </div>
+                        
+                    </div>
+                    </div>
+                    </div>
+                   
+                
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mt-5 mb-5">
+                            <div class="submit_form">
+                                <a href="confirmation.html" >
+                                <button onclick="saveDetails()" id="submit_details"
+                                 value="Continue with Purchase"
+                                style="font-size: larger; cursor: pointer; border-radius: 10px; 
+                                padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; width: 80%; height: 20%;">Pay</button></a>
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                <!--<div class="row justify-content-center">
+                    <div class="col-md-6 mt-5 mb-5">
+                        <div class="submit_form">
+                            <input type="submit" id="submit_details"
+                             form="customer_details" value="Continue with Purchase" 
+                             style="font-size: larger; cursor: pointer; border-radius: 50px; padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px;">
+                        </div>
+                    </div>
+                    
+                </div>-->
+            </div> 
+                    </div>
+                </div>
+                
+    <div class="turtle-col2">
+        <div class="cat2">
+            <h1>Your Booking Details</h1>
+            <div class="table"><center>
+                <table border="1">
+                    <tbody>
+                    <tr style="color: white;">
+                        <th>Date</th>
+                        <td>
+                            <span id='cur_date' style="color: aliceblue;"></span>
+                        </td>
+                    </tr>
+
+                    <tr style="color: white;">
+                        <th>Time</th>
+                        <td><span id="ar_time">07.00 am - 08.00 am</span></td>
+                    </tr>
+                    <tr style="color: white;">
+                        <th>Duration</th>
+                        <td><span id="duration">1 hrs ( 01 Normal : 00 Peak)</span> hrs</td>
+                    </tr>
+
+                    <tr style="color: white;">
+                        <th>Tickets</th>
+                        <th>Chargers</th>
+                    </tr>
+                    <tr style="color: white;">
+                        <td><span id="guest_type"><Span id="sl_adults">1</Span><span
+                                id="ticketType"> SL Adult</span></td>
+                        <td><span id="sla">$</span></td>
+                    </tr>
+                    <tr style="color: white;">
+                        <td><span id="guest_type"><Span id="sl_child">1</Span><span
+                                id="ticketType"> SL Child</span></td>
+                        <td><span id="slc">$</span></td>
+                    </tr>
+                    <tr style="color: white;">
+                        <td><span id="guest_type"><Span id="fr_adults">1</Span><span id="ticketType"> Foreigner Adult</span>
+                        </td>
+                        <td><span id="fa">$</span></td>
+                    </tr>
+                    <tr style="color: white;">
+                        <td><span id="guest_type"><Span id="fr_child">1</Span><span id="ticketType"> Foreigner Child</span>
+                        </td>
+                        <td><span id="fc">$</span></td>
+                    </tr>
+                    <tr style="color: white;">
+                        <td><span id="guest_type"><Span id="infant">1</Span><span id="ticketType"> Infant</span>
+                        </td>
+                        <td><span id="i">$</span></td>
+                    </tr>
+
+                    <tr style="color: white;">
+                        <th>Total</th>
+                        <td><span id="total">$10.00</span></td>
+                    </tr>
+                </table>
+            </center>
+            <script>
+                document.getElementById("cur_date").innerHTML = localStorage.getItem("arrivingDate");
+                document.getElementById("ar_time").innerHTML = localStorage.getItem("timeSlotArray");
+                document.getElementById("duration").innerHTML = localStorage.getItem("stayDuration");
+                document.getElementById("sla_count").innerHTML = localStorage.getItem("SL Adults");
+                //document.getElementById("sla_count").innerHTML = localStorage.getItem("SL Child");
+            </script>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <img src="pics/logo2.png" class="logo_footer">
+            <p>
+                Join with Turtles Lanka and make a difference in saving turtles.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Us <div class="underline"><span></span></div></h3>
+            <ul>
+                <li>Turtles Lanka - <i>011 2719729</i></li>
+                <li> Hikkaduwa   - <i>011 2345678</i></li>
+                <li>Kosgoda - <i>011 2712769</i></li>
+                <li>Bentota - <i>011 2715298</i></li>
+            
+            
+            <p class="email"><i class="fa fa-envelope"></i>turtlelanka@gmail.com</p>
+        </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Links<div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="turtle hatcheries.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="map.html">Map & Highlights</a></li>
+                <li><a href="donate.html">Purchases and Donations</a></li>
+                <li><a href="Hikkaduwa.html">Hikkaduwa Hatchery</a></li>
+                <li><a href="Kosgoda.html">Kosgoda Hatchery</a></li>
+                <li><a href="bentota.html">Benthota Hatchery</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Social Media<div class="underline"><span></span></div></h3>
+            
+            <i class="fa fa-Facebook-f"></i>- Facebook<br>
+            <i class="fa fa-twitter"></i>-Twitter<br>
+            <i class="fa fa-whatsapp"></i>-Whatsapp<br>
+            <i class="fa fa-instagram"></i>-Instagram
+      
+            
+        </div>
+    </div>
+    <hr>
+    <p class="copyryt">- Turtleslanka © 2023 -</p>
+    <!--
+    <li>Campbell, L.M., 2010. Studying Sea Turtle Conservations and Learning about the World. Conservation and Society, 8(1), pp.1-4.</li>
+    <li>Carr, A., 1980. Some problems of sea turtle ecology. American Zoologist, 20(3), pp.489-498</li>
+   <li>Wij, I., 2011. Sri Lanka tourism: poised for growth. Gurgaon, India: HVS..</li>
+   <li>Sivakumar, M. and Steele, P., 1997. A STRATEGY FOR NATURE TOURISM MANAGEMENT.</li>
+   <li>Wickramsinghe, S., 1982. Turtle hatcheries in Sri Lanka. Marine Turtle Newsletter, 22, pp.3-4.</li>
+   <li>Kapurusinghe, T., Ekanayake, L., Saman, M.M. and Rathnakumara, D.S., 2008. Community based marine 
+      turtle conservation in Kosgoda, Sri Lanka: nesting results from 2005 to 2007. TESTUDO, 6 (5), pp.40-47.</li>
+ -->
+</footer>
+
+
+
+    <script src="payment.js"></script>
+    </body>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    
+        const info = document.querySelector(".alert-info");
+        const error = document.querySelector(".alert-error");
+    
+    function process(event) {
+     event.preventDefault();
+    
+     const phoneNumber = phoneInput.getNumber();
+    
+     info.style.display = "";
+     info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+    }
+    
+    
+    
+    
+    
+    
+    
+      </script>
+</html>

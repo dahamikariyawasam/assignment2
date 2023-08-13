@@ -1,0 +1,443 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Turtle hatcheries in Sri Lanka</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ticketstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+</head>
+
+<body>
+    <section class="header">
+		<div class="top_header">
+			<div class="logo"><img src="pics/logo2.png">
+			</div>
+			<div class="topnav" id="myTopnav">
+				<a href="turtle hatcheries.html"><b>Home</b>   </a>
+				<a href="Ticketspage.html"  class="active"><b>Tickets </b> </a>
+
+			  <a href="details.html"><b>Details</b></a>
+			  <a href="payment.html"><b>Payment </b></a>
+              <a href="confirmation.html"><b>Confirmation </b></a>
+
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			  <i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>
+			<div class="content">
+				<h1><br>BUY TICKETS</h1>
+				<p>
+					Turtle hatcheries in Sri Lanka play a vital role in protecting endangered sea turtles. <br>
+				</p>
+			</div>
+			<div>
+				<video autoplay loop muted plays-inline class="back-video">
+                <source src="pics/video2.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+    </section>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+          // -----Country Code Selection
+            $("#mobile_code").intlTelInput({
+                initialCountry: "in",
+                separateDialCode: true,
+                // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+            });
+        }
+        
+    </script>  
+    
+    <script  type="text/javascript">
+        function storageFunction(){
+            
+            //document.getElementById("booking").submit();
+            var inputDate = document.getElementById("arriving_date");
+            localStorage.setItem("arrivingDate",inputDate.value);
+
+            
+            var inputSLAdults = document.getElementById("sl_adults");
+            localStorage.setItem("SL Adults",inputSLAdults.value);
+            var inputSLChild = document.getElementById("sl_child");
+            localStorage.setItem("SL Child",inputSLChild.value);
+            var inputSLChild = document.getElementById("fr_adults");
+            localStorage.setItem("Foreigner Adult",inputSLChild.value);
+            var inputSLChild = document.getElementById("fr_child");
+            localStorage.setItem("Foreigner Child",inputSLChild.value);
+            var inputSLChild = document.getElementById("infant");
+            localStorage.setItem("Infant",inputSLChild.value);
+
+            //var inputSLChild = document.getElementById("full_name");
+            //localStorage.setItem("Full Name",inputSLChild.value);
+            
+            var selected = [];
+            localStorage.duration = 0;
+            localStorage.arrivingTime = null;
+            for (var option of document.getElementById("time_slots").options)
+            {
+                if (option.selected) {
+                    selected.push(option.value);
+                    localStorage.duration = Number(localStorage.duration) + 1;
+                }
+            }
+            
+            
+            
+            localStorage.setItem("stayDuration",localStorage.duration);
+            localStorage.setItem("timeSlotArray",selected);
+            //localStorage.setItem("arrivingTime",ar_time);
+            location.replace("details.html");
+
+           
+}
+        
+        
+    </script>
+
+
+        <div class="something">
+            <h1>Buy Tickets </h1><br>
+            <p>Show your tickets via mobile device(Download It) or print at home.</p>
+            <form id="booking">   </form>
+                 <div class="row">
+                    <div class="turtle-col">
+                        <h3>Date - When Are You Coming?</h3>
+                        <!--<label for="arriving_date">Pick the Date</label>-->
+                        <input type="date"  form="booking" id="arriving_date" name="arriving_date">
+                    </div>
+                    <div class="turtle-col">
+                        <h3>Guests - With whom will you visit us? </h3>
+                        <div class="number-input-box">
+                            <div class="number-input">
+                                     <label for="sl_adults">SL Adults</label>
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                    <input class="quantity" form="booking" min="0" placeholder="0" type="number" id="sl_adults" name="sl_adults">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                            </div>
+                            <div class="number-input">
+                                <label for="sl_child"> SL Child</label>
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                    <input class="quantity" form="booking" min="0" placeholder="0" type="number" id="sl_child" name="sl_child">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                </div>
+
+                            <div class="number-input">
+                                <label for="fr_adults">Foreigner Adult</label>
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                    <input class="quantity" form="booking" min="0" name="fr_adults" placeholder="0" type="number" id="fr_adults">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                </div>
+
+                            <div class="number-input">
+                                    <label for="fr_child">	Foreigner Child</label>
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                    <input class="quantity" form="booking" min="0" name="fr_child" placeholder="0" type="number" id="fr_child">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                </div>
+
+                            <div class="number-input">
+                                    <label for="infant">Infant</label>
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                    <input class="quantity" form="booking" min="0" name="infant" placeholder="0" type="number" id="infant">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="turtle-col">
+                        <h3>Duration - How Long will you Stay?</h3>
+                        <!--<label for="time_slots" style="display:inline-flex;">Pick your time slot</label>
+                        -->
+                            <select id="time_slots" name="time_slots" form="booking" size="11" multiple>
+                            <option value="7-8"> 07.00 am - 08.00 am</option>
+                            <option value="8-9"> 08.00 am - 09.00 am</option>
+                            <option value="9-10"> 09.00 am - 10.00 am</option>
+                            <option value="10-11"> 10.00 am - 11.00 am</option>
+                            <option value="11-12"> 11.00 am - 12.00 pm</option>
+                            <option value="12-13"> 12.00 pm - 01.00 pm</option>
+                            <option value="13-14"> 01.00 pm - 02.00 pm</option>
+                            <option value="14-15"> 02.00 pm - 03.00 pm</option>
+                            <option value="15-16"> 03.00 pm - 04.00 pm</option>
+                            <option value="16-17"> 04.00 pm - 05.00 pm</option>
+                            <option value="17-18"> 05.00 pm - 06.00 pm</option>
+                        </select>
+                    </div>
+                </div>
+                        <div class="submit_form">
+
+                            <button  onclick="storageFunction()"  id="submit"  value="Continue with Purchase"
+                            style="font-size: larger; cursor: pointer; border-radius: 10px;
+                            padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; width: 20%; height: 7%;"> Continue with Purchase </button>
+
+                        </div>
+
+
+
+        </div>
+
+<div class="all">
+    <div class="row">
+        <div class="turtle-col">
+            <div class="threats">
+                <h1> Price List</h1>
+                <div class="table"><center>
+                    <table border="1">
+                        <tr style="color: white;">
+                                <th>Peak/Off-Peak</th>
+                                <th>Ticket Type</th>
+                                <th>Ticket Price</th>
+                        </tr>
+                        <tr style="color: white;">
+                                <td rowspan="4">Peak Hour
+                                    <p style="font-size: smaller;">10.00 am - 1.00 pm <br>
+                                        and
+                                    <br/>
+                                    3.00 pm to 6.00 pm</p>
+                                </td>
+                                <td>Foreigner Adult </td>
+                                <td> 13 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>Foreigner Child</td>
+                                <td>8 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>SL Adult</td>
+                                <td>6 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>SL Child</td>
+                                <td>3 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td rowspan="4">Normal Hour</td>
+                                <td>Foreigner Adult </td>
+                                <td> 10 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>Foreigner Child</td>
+                                <td>5 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>SL Adult</td>
+                                <td>4 USD</td>
+                            </tr>
+                            <tr style="color: white;">
+                                <td>SL Child</td>
+                                <td>2 USD</td>
+                            </tr>
+                    </table></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="turtle-col">
+        <div class="cat">
+            <h1>Your Booking Details</h1>
+            <div class="table"><center>
+                <table border="1">                
+                    <tbody>
+                        <tr style="color: white;">                    
+                            <th>Date</th>
+                            <td >
+                                <span id='cur_date' style="color: aliceblue;"></span>
+                            </td>                    
+                        </tr>
+
+                        <tr style="color: white;">                    
+                            <th>Time</th>
+                            <td> <span id="ar_time">07.00 am - 08.00 am</span></td>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <th>Duration</th>
+                            <td><span id="duration">1 hrs ( 01 Normal : 00 Peak)</span> hrs</td>                    
+                        </tr>
+                        
+                        <tr style="color: white;">                    
+                            <th>Tickets</th>
+                            <th>Chargers </th>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <td><span id="guest_type"><Span id="sl_adults">1</Span><span id="ticketType"> -  SL Adult</span></td>
+                            <td><span id="guest_total">$</span></td>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <td><span id="guest_type"><Span id="sl_child">1</Span><span id="ticketType">  -  SL Child</span></td>
+                            <td><span id="guest_total">$</span></td>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <td><span id="guest_type"><Span id="fr_adults">1</Span><span id="ticketType">  -  Foreigner Adult</span></td>
+                            <td><span id="guest_total">$</span></td>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <td><span id="guest_type"><Span id="fr_child">1</Span><span id="ticketType">  -  Foreigner Child</span></td>
+                            <td><span id="guest_total">$</span></td>                    
+                        </tr>
+                        <tr style="color: white;">                    
+                            <td><span id="guest_type"><Span id="infant">1</Span><span id="ticketType">  -  Infant</span></td>
+                            <td><span id="guest_total">$</span></td>                    
+                        </tr>
+
+                        <tr style="color: white;">                    
+                            <th>Total</th>
+                            <td><span id="grand_total">$10.00</span></td>                    
+                        </tr>                 
+            </table></center>
+            <script>
+                document.getElementById("cur_date").innerHTML = localStorage.getItem("arrivingDate");
+                document.getElementById("ar_time").innerHTML = localStorage.getItem("timeSlotArray");
+                document.getElementById("duration").innerHTML = localStorage.getItem("stayDuration");
+
+                document.getElementById("sl_adults").innerHTML = localStorage.getItem("SL Adults");
+                document.getElementById("sl_child").innerHTML = localStorage.getItem("SL Child");
+                document.getElementById("fr_adults").innerHTML = localStorage.getItem("Foreigner Adult");
+                document.getElementById("fr_child").innerHTML = localStorage.getItem("Foreigner Child");
+                document.getElementById("infant").innerHTML = localStorage.getItem("Infant");
+                
+            </script>
+        </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="pics/logo2.png" class="logo_footer">
+                <p>
+                    Join with Turtles Lanka and make a difference in saving turtles.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li>Turtles Lanka - <i>011 2719729</i></li>
+                    <li> Hikkaduwa   - <i>011 2345678</i></li>
+                    <li>Kosgoda - <i>011 2712769</i></li>
+                    <li>Bentota - <i>011 2715298</i></li>
+
+
+                    <p class="email"><i class="fa fa-envelope"></i>turtlelanka@gmail.com</p>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Links<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="turtle hatcheries.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="map.html">Map & Highlights</a></li>
+                    <li><a href="donate.html">Purchases and Donations</a></li>
+                    <li><a href="Hikkaduwa.html">Hikkaduwa Hatchery</a></li>
+                    <li><a href="Kosgoda.html">Kosgoda Hatchery</a></li>
+                    <li><a href="bentota.html">Benthota Hatchery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Social Media<div class="underline"><span></span></div></h3>
+
+                <i class="fa fa-Facebook-f"></i>- Facebook<br>
+                <i class="fa fa-twitter"></i>-Twitter<br>
+                <i class="fa fa-whatsapp"></i>-Whatsapp<br>
+                <i class="fa fa-instagram"></i>-Instagram
+
+
+            </div>
+        </div>
+        <hr>
+        <p class="copyryt">- Turtleslanka © 2023 -</p>
+        <!--
+        <li>Campbell, L.M., 2010. Studying Sea Turtle Conservations and Learning about the World. Conservation and Society, 8(1), pp.1-4.</li>
+        <li>Carr, A., 1980. Some problems of sea turtle ecology. American Zoologist, 20(3), pp.489-498</li>
+       <li>Wij, I., 2011. Sri Lanka tourism: poised for growth. Gurgaon, India: HVS..</li>
+       <li>Sivakumar, M. and Steele, P., 1997. A STRATEGY FOR NATURE TOURISM MANAGEMENT.</li>
+       <li>Wickramsinghe, S., 1982. Turtle hatcheries in Sri Lanka. Marine Turtle Newsletter, 22, pp.3-4.</li>
+       <li>Kapurusinghe, T., Ekanayake, L., Saman, M.M. and Rathnakumara, D.S., 2008. Community based marine
+          turtle conservation in Kosgoda, Sri Lanka: nesting results from 2005 to 2007. TESTUDO, 6 (5), pp.40-47.</li>
+     -->
+</footer>
+
+<script>
+
+        document.getElementById("cur_date").innerHTML = localStorage.getItem("arrivingDate");
+        const dt = new Date();
+        document.getElementById('cur_date').innerHTML=dt;
+
+</script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<script  type="text/javascript">
+    function storageFunction2(){
+
+        //document.getElementById("booking").submit();
+        var inputDate = document.getElementById("arriving_date");
+        localStorage.setItem("arrivingDate",inputDate.value);
+
+
+        var inputSLAdults = document.getElementById("sl_adults");
+        localStorage.setItem("SL Adults",inputSLAdults.value);
+        var inputSLChild = document.getElementById("sl_child");
+        localStorage.setItem("SL Child",inputSLChild.value);
+        var inputSLChild = document.getElementById("fr_adults");
+        localStorage.setItem("Foreigner Adult",inputSLChild.value);
+        var inputSLChild = document.getElementById("fr_child");
+        localStorage.setItem("Foreigner Child",inputSLChild.value);
+        var inputSLChild = document.getElementById("infant");
+        localStorage.setItem("Infant",inputSLChild.value);
+
+        var inputname = document.getElementById("full_name");
+        localStorage.setItem("Full Name",inputname.value);
+
+        var selected = [];
+        localStorage.duration = 0;
+        localStorage.   null;
+        for (var option of document.getElementById("time_slots").options)
+        {
+            if (option.selected) {
+                selected.push(option.value);
+                localStorage.duration = Number(localStorage.duration) + 1;
+            }
+        }
+
+       
+
+        localStorage.setItem("stayDuration",localStorage.duration);
+        localStorage.setItem("timeSlotArray",selected);
+       
+        location.replace("details.html");
+
+
+    }
+
+
+</script>
+
+<script src="booking.js"></script>
+
+</body>
+
+</html>
